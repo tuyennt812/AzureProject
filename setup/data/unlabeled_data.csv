@@ -1,0 +1,11 @@
+country,gender,age,credit_score,tenure,balance,products_number,credit_card,active_member,estimated_salary
+Spain,Female,45,703,1,0.0,1,1,0,182784.11
+France,Female,43,612,4,139496.35,2,1,1,77128.23
+Spain,Male,38,559,3,145874.35,1,1,0,56311.39
+France,Female,60,350,3,0.0,1,0,0,113796.15
+France,Female,39,764,1,129068.54,2,1,1,187905.12
+Germany,Female,52,796,9,167194.36,1,1,1,62808.93
+Spain,Female,32,613,0,0.0,2,0,1,126675.62
+France,Female,37,705,10,0.0,2,1,1,13935.53
+France,Female,31,542,3,0.0,2,1,1,115217.59
+France,Female,31,542,3,0.0,2,1,1,115217.59
