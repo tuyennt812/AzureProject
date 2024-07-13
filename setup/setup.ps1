@@ -143,8 +143,7 @@ az ml workspace create --name $amlWorkspace --resource-group $resourceGroupName 
 
 #Create compute resources
 $COMPUTE_INSTANCE= "ci$suffix"
-az ml compute create --name $COMPUTE_INSTANCE --size STANDARD_DS11_V2 --type ComputeInstance --workspaceName $amlWorkspace --resource-group $resourceGroupName
-
+az ml compute create --name $COMPUTE_INSTANCE --size STANDARD_DS11_V2 --min-instances 0 --max-instances 2 --type AmlCompute --resource-group $resourceGroupName --workspace-name $amlWorkspace
 # Create Synapse workspace
 $synapseWorkspace = "synapse$suffix"
 $dataLakeAccountName = "datalake$suffix"
