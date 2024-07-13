@@ -144,8 +144,8 @@ az ml workspace create --name $amlWorkspace --resource-group $resourceGroupName 
 #Create compute resources
 $COMPUTE_INSTANCE= "ci$suffix"
 $COMPUTE_CLUSTER="amlcluster$suffix"
-az ml compute create --name $COMPUTE_INSTANCE --size STANDARD_DS11_V2 --type ComputeInstance --w $amlWorkspace --g $resourceGroupName
-az ml compute create --name $COMPUTE_CLUSTER --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute --w $amlWorkspace --g $resourceGroupName 
+az ml compute create --name $COMPUTE_INSTANCE --size STANDARD_DS11_V2 --type ComputeInstance --workspaceName $amlWorkspace --resource-group $resourceGroupName
+az ml compute create --name $COMPUTE_CLUSTER --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute --workspaceName $amlWorkspace --resource-group $resourceGroupName 
 
 # Create Synapse workspace
 $synapseWorkspace = "synapse$suffix"
