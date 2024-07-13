@@ -1,0 +1,4 @@
+$schema: https://azuremlschemas.azureedge.net/latest/amlCompute.schema.json 
+name: almcompute
+type: ComputeInstance
+size:  Standard_A2_v2
