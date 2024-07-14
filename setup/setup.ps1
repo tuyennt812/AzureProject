@@ -140,10 +140,11 @@ New-AzResourceGroup -Name $resourceGroupName -Location $Region | Out-Null
 $amlWorkspace = "aml$suffix"
 Write-Host "Creating $amlWorkspace Azure Machine Learning workspace in $resourceGroupName resource group..."
 az ml workspace create --name $amlWorkspace --resource-group $resourceGroupName --no-wait
+az configure --defaults workspace=$amlWorkspace
 
 #Create compute resources
-$COMPUTE_INSTANCE= "ci$suffix"
-az ml compute create --name $COMPUTE_INSTANCE --size STANDARD_DS11_V2 --min-instances 0 --max-instances 2 --type AmlCompute --resource-group $resourceGroupName --workspace-name $amlWorkspace
+az ml compute create --name "almcomputeinstance --size STANDARD_DS11_V2 --type ComputeInstance
+
 # Create Synapse workspace
 $synapseWorkspace = "synapse$suffix"
 $dataLakeAccountName = "datalake$suffix"
