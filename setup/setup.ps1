@@ -1,6 +1,4 @@
 Clear-Host
-write-host "Starting script at $(Get-Date)"
-
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 Install-Module -Name Az.Synapse -Force
 
