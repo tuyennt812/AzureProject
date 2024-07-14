@@ -180,5 +180,3 @@ Get-ChildItem "./data/*.csv" -File | Foreach-Object {
     $blobPath = "data/$file"
     Set-AzStorageBlobContent -File $_.FullName -Container "files" -Blob $blobPath -Context $storageContext
 }
-
-write-host "Script completed at $(Get-Date)"
